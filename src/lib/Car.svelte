@@ -1,5 +1,7 @@
 <script lang="ts">
-  import capitalize from 'just-capitalize';
+	import CarTitle from './components/CarTitle.svelte';
+  import Lose from './components/Lose.svelte';
+  import Win from './components/Win.svelte';
   
   function generateCar(){
     let cars = ["audi", "chevrolet", "citroen", "honda", "hyundai", "pegout", "renault", "suzuki", "volkswagen", "toyota", "mercedes"] 
@@ -44,33 +46,21 @@
       carChosen = false;
     }
   }
-
-  function goToHome() {        
-    window.location.href = '/#/'
-  }
   
 </script>
 
 <main>
   {#if carChosen}
     {#if result[0] == 'win'}
-      <h1 id="win-lose-title" class="title is-1">Hai Vinto</h1>
-      <div id="get-back-btn">
-        <button class="button is-link is-rounded is-outlined" style="margin-top: 70px;" on:click={goToHome}>Torna a casa</button>
-      </div>
-      {:else}
-      <h1 id="win-lose-title" class="title is-1">Hai perso</h1>
-
-      <div id="get-back-btn">
-        <button class="button is-link is-rounded is-outlined" style="margin-top: 70px;" on:click={goToHome}>Torna a casa</button>
-      </div>
-
+      <Win/>
+    {:else}
+      <Lose/>
     {/if}
   {:else}
     {#if chosenCar == 1}
-      <h1 id="car" class="title is-3">{capitalize(car1.toString())}</h1>
-    {:else}
-      <h1 id="car" class="title is-3">{capitalize(car2.toString())}</h1>
+      <CarTitle car={car1}/> 
+      {:else}
+      <CarTitle car={car2}/> 
     {/if}
     <div id="images">
       <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300" id="img1">
@@ -92,11 +82,6 @@
 
   main{
     font-family: 'Raleway', sans-serif;
-  }
-
-
-  #car{
-    text-align: center;
   }
 
   #images{
@@ -123,16 +108,5 @@
 
   #btn2{
     margin-left: 15px;
-  }
-
-  #win-lose-title {
-    text-align: center;
-    font-weight: bold;
-  }
-
-  #get-back-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 </style>
