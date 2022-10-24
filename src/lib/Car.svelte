@@ -1,31 +1,46 @@
 <script lang="ts">
   import capitalize from 'just-capitalize';
   
-  let cars = ["audi", "chevrolet", "citroen", "honda", "hyundai", "pegout", "renault", "suzuki", "volkswagen"] 
-  
-  let car1 = cars[Math.floor(Math.random()*cars.length)];
-  let car2 = cars[Math.floor(Math.random()*cars.length)];  
-
-  if ( car1 == car2){
-    car2 = cars[Math.floor(Math.random()*cars.length)];  
-  } 
-
-  let chosenCar = Math.floor(Math.random() * 2) + 1
+  function generateCar(){
+    let cars = ["audi", "chevrolet", "citroen", "honda", "hyundai", "pegout", "renault", "suzuki", "volkswagen"] 
+    let car1 = cars[Math.floor(Math.random()*cars.length)];
+    let car2 = cars[Math.floor(Math.random()*cars.length)];  
+    if ( car1 == car2){
+      car2 = cars[Math.floor(Math.random()*cars.length)];  
+    }
+    let chosenCar = Math.floor(Math.random() * 2) + 1
+    return [car1, car2, chosenCar]
+  }
   let carChosen = false; 
 
+  let carss = generateCar()
+  let car1 = carss[0] 
+  let car2 = carss[1] 
 
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
   let result = []
 
-  function checkCar(carNum?){
-    if ( carNum == chosenCar){
+  async function checkCar(carNum?){
+    carss = generateCar()
+    if ( carNum == carss[2]){
       carChosen = true;
+      result.length = 0
       result.push('win')
-      return true;
+      await sleep(3000);
+      let carss = generateCar()
+      car1 = carss[0] 
+      car2 = carss[1]
+      carChosen = false;
     } else{
       carChosen = true;
+      result.length = 0
       result.push('lost')
-      return false;
+      await sleep(3000);
+      let carss = generateCar()
+      car1 = carss[0] 
+      car2 = carss[1]
+      carChosen = false;
     }
   }
 </script>
@@ -38,10 +53,10 @@
       <h1 id="win-lose-title" class="title is-1">Hai perso</h1>
     {/if}
   {:else}
-    {#if chosenCar == 1}
-      <h1 id="car" class="title is-3">{capitalize(car1)}</h1>
+    {#if carss[2] == 1}
+      <h1 id="car" class="title is-3">{capitalize(car1.toString())}</h1>
     {:else}
-      <h1 id="car" class="title is-3">{capitalize(car2)}</h1>
+      <h1 id="car" class="title is-3">{capitalize(car2.toString())}</h1>
     {/if}
     <div id="images">
       <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300" id="img1">
