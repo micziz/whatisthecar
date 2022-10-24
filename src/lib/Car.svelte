@@ -8,9 +8,9 @@
     if ( car1 == car2){
       car2 = cars[Math.floor(Math.random()*cars.length)];  
     }
-    let chosenCar = Math.floor(Math.random() * 2) + 1
-    return [car1, car2, chosenCar]
+    return [car1, car2]
   }
+  let chosenCar = Math.floor(Math.random() * 2) + 1
   let carChosen = false; 
 
   let carss = generateCar()
@@ -22,24 +22,25 @@
   let result = []
 
   async function checkCar(carNum?){
-    carss = generateCar()
-    if ( carNum == carss[2]){
+    if ( carNum == chosenCar){
       carChosen = true;
       result.length = 0
       result.push('win')
       await sleep(3000);
-      let carss = generateCar()
+      carss = generateCar()
       car1 = carss[0] 
       car2 = carss[1]
+      chosenCar = Math.floor(Math.random() * 2) + 1
       carChosen = false;
     } else{
       carChosen = true;
       result.length = 0
       result.push('lost')
       await sleep(3000);
-      let carss = generateCar()
+      carss = generateCar()
       car1 = carss[0] 
       car2 = carss[1]
+      chosenCar = Math.floor(Math.random() * 2) + 1
       carChosen = false;
     }
   }
@@ -53,14 +54,14 @@
       <h1 id="win-lose-title" class="title is-1">Hai perso</h1>
     {/if}
   {:else}
-    {#if carss[2] == 1}
+    {#if chosenCar == 1}
       <h1 id="car" class="title is-3">{capitalize(car1.toString())}</h1>
     {:else}
       <h1 id="car" class="title is-3">{capitalize(car2.toString())}</h1>
     {/if}
     <div id="images">
       <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300" id="img1">
-      <img src={`/images/${car2}.jpg`} alt="car-1" width="300" height="300" id="img2">
+      <img src={`/images/${car2}.jpg`} alt="car-2" width="300" height="300" id="img2">
     </div>
 
     <div id="buttons">
