@@ -2,7 +2,7 @@
   import capitalize from 'just-capitalize';
   
   function generateCar(){
-    let cars = ["audi", "chevrolet", "citroen", "honda", "hyundai", "pegout", "renault", "suzuki", "volkswagen"] 
+    let cars = ["audi", "chevrolet", "citroen", "honda", "hyundai", "pegout", "renault", "suzuki", "volkswagen", "toyota", "mercedes"] 
     let car1 = cars[Math.floor(Math.random()*cars.length)];
     let car2 = cars[Math.floor(Math.random()*cars.length)];  
     if ( car1 == car2){
@@ -44,14 +44,27 @@
       carChosen = false;
     }
   }
+
+  function goToHome() {        
+    window.location.href = '/#/'
+  }
+  
 </script>
 
 <main>
   {#if carChosen}
     {#if result[0] == 'win'}
       <h1 id="win-lose-title" class="title is-1">Hai Vinto</h1>
-    {:else}
+      <div id="get-back-btn">
+        <button class="button is-link is-rounded is-outlined" style="margin-top: 70px;" on:click={goToHome}>Torna a casa</button>
+      </div>
+      {:else}
       <h1 id="win-lose-title" class="title is-1">Hai perso</h1>
+
+      <div id="get-back-btn">
+        <button class="button is-link is-rounded is-outlined" style="margin-top: 70px;" on:click={goToHome}>Torna a casa</button>
+      </div>
+
     {/if}
   {:else}
     {#if chosenCar == 1}
@@ -115,5 +128,11 @@
   #win-lose-title {
     text-align: center;
     font-weight: bold;
+  }
+
+  #get-back-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
