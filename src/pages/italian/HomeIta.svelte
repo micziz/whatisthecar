@@ -1,5 +1,5 @@
 <script lang="ts"> 
-	import Title from './../lib/components/Title.svelte';
+	import Title from '../../lib/ita/components/Title.svelte';
 
     function GOTO(location: string){
         window.location.href = `/#/${location}`
@@ -8,8 +8,6 @@
   
 <main> 
     <Title/>
-
-    <h1 style="text-align: center;">Creato da Micziz</h1>
 
     <div id="btn">
         <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("normal")} id="btn1">Modalita Normale</button>

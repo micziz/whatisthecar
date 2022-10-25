@@ -1,6 +1,7 @@
 <script lang="ts">
-	import GoHome from './../lib/components/GoHome.svelte';
-    import CarPoints from "../lib/CarPoints.svelte";
+	import GoHome from '../../lib/eng/components/GoHome.svelte';
+    import CarPoints from "../../lib/eng/CarPoints.svelte";
+    import Title from '../../lib/eng/components/Title.svelte';
 
     let inGame = false;
     let maxTimes;
@@ -12,15 +13,15 @@
 </script>
   
 <main> 
-    <h1 id="title" class="title is-1">What is the car</h1>
+    <Title/>
 
     {#if !inGame}
-        <h1 class="title is-3" id="title-1">Qunati punti?</h1>
+        <h1 class="title is-3" id="title-1">How many points?</h1>
 
         <div id="points-choice-btns">
-            <button on:click={() => startGame(4)} id="five-pt" class="button is-link is-rounded is-outlined">5 punti</button>
-            <button on:click={() => startGame(9)} id="ten-pt" class="button is-link is-rounded is-outlined">10 punti (defualt)</button>
-            <button on:click={() => startGame(19)} id="twenty-pt" class="button is-link is-rounded is-outlined">20 punti</button>
+            <button on:click={() => startGame(4)} id="five-pt" class="button is-link is-rounded is-outlined">5 points</button>
+            <button on:click={() => startGame(9)} id="ten-pt" class="button is-link is-rounded is-outlined">10 points (defualt)</button>
+            <button on:click={() => startGame(19)} id="twenty-pt" class="button is-link is-rounded is-outlined">20 points</button>
         </div>
 
         <GoHome/>
@@ -35,12 +36,6 @@
   
     main{
       font-family: 'Raleway', sans-serif;
-    }
-  
-    #title {
-      text-align: center;
-      margin-top: 50px;
-      font-weight: bold;
     }
   
 

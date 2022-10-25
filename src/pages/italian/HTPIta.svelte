@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Title from "../lib/components/Title.svelte";
+  import Title from "../../lib/ita/components/Title.svelte";
 
     let tutNum = 1;
 

@@ -1,6 +1,6 @@
 <script>
-    import GoHome from "../lib/components/GoHome.svelte";
-    import Title from "../lib/components/Title.svelte";
+    import GoHome from "../../lib/ita/components/GoHome.svelte";
+    import Title from "../../lib/ita/components/Title.svelte";
 
 </script>
 
@@ -20,6 +20,10 @@
 </main>
 
 <style>
+    main{
+      font-family: 'Raleway', sans-serif;
+    }
+
     #h1{
         text-align: center;
         margin-top: 65px;

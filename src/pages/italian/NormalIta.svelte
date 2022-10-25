@@ -1,10 +1,11 @@
 <script lang="ts">
-    import Car from "../lib/Car.svelte";
+	  import Title from './../../lib/ita/components/Title.svelte';
+    import Car from "../../lib/ita/Car.svelte";
  
 </script>
   
 <main> 
-    <h1 id="title" class="title is-1">What is the car</h1>
+    <Title/>
 
     <Car/>
 </main>
@@ -14,12 +15,6 @@
   
     main{
       font-family: 'Raleway', sans-serif;
-    }
-  
-    #title {
-      text-align: center;
-      margin-top: 50px;
-      font-weight: bold;
     }
   
 </style>
