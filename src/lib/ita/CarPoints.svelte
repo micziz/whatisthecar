@@ -4,7 +4,7 @@
     import Lose from './components/Lose.svelte';
     import Win from './components/Win.svelte';
 
-    import { cars } from './utils/cars.js';
+    import { cars } from '../utils/cars.js';
 
 
     function generateCar(){
