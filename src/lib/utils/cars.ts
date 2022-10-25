@@ -16,5 +16,11 @@ export let cars = [
     "skoda",
     "bentley",
     "mitsubishi",
-    "opel"
+    "opel",
+    "meserati",
+    "mazda",
+    "jaguar",
+    "lexus"
 ] 
+
+console.log(cars.length)
