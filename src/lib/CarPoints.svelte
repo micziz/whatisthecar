@@ -6,7 +6,7 @@
 
     import { cars } from './utils/cars.js';
 
-  
+
     function generateCar(){
         let car1 = cars[Math.floor(Math.random()*cars.length)];
         let car2 = cars[Math.floor(Math.random()*cars.length)];  
@@ -69,7 +69,17 @@
         {#if result[0] == 'win'}
             <Win/>
         {:else}
-            <Lose/>
+            {#if chosenCar == 1}
+                <Lose car={car1}/>
+                <div id="images">
+                    <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300"> 
+                </div>
+            {:else}
+                <Lose car={car2}/>
+                <div id="images">
+                    <img src={`/images/${car2}.jpg`} alt="car-1" width="300" height="300"> 
+                </div>
+            {/if}
         {/if}
     {:else if fineshed == true}
         <Finished pointCount={pointCount}  maxNum={maxTimes}/>
