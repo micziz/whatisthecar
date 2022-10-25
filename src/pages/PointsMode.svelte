@@ -15,7 +15,7 @@
     <h1 id="title" class="title is-1">What is the car</h1>
 
     {#if !inGame}
-        <h1 class="title is-3" id="title">Qunati punti?</h1>
+        <h1 class="title is-3" id="title-1">Qunati punti?</h1>
 
         <div id="points-choice-btns">
             <button on:click={() => startGame(4)} id="five-pt" class="button is-link is-rounded is-outlined">5 punti</button>
@@ -44,14 +44,16 @@
     }
   
 
-    #title{
+    #title-1{
         text-align: center;
+        margin-top: 400px;
     }
 
     #points-choice-btns{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 40px;
     }
 
     #five-pt{
