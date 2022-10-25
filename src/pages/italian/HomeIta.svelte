@@ -18,6 +18,11 @@
         <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htp")} id="btn-htp-1">Come si gioca</button>
         <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("about")} id="">Crediti</button>
     </div>
+
+    <h1 class="title is-3" style="text-align: center; margin-top: 70px; margin-right: 40px;">Altre lingue</h1>
+    <div id="btn-lang">
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("eng")} id="btn-htp-1">English</button>
+    </div>
 </main>
   
 <style>
@@ -39,6 +44,12 @@
         justify-content: center;
         align-items: center;
         margin-top: 70px;
+    }
+
+    #btn-lang{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
   
     #btn-htp-1{

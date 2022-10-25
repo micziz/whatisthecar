@@ -1,6 +1,6 @@
 <script lang="ts">
     function goToHome() {        
-        window.location.href = '/#/'
+        window.location.href = '/#/eng'
     }
 </script>
 
