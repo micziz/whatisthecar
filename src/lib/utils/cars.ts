@@ -15,5 +15,6 @@ export let cars = [
     "ferrari",
     "skoda",
     "bentley",
-    "mitsubishi"
+    "mitsubishi",
+    "opel"
 ] 
