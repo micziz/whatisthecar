@@ -17,7 +17,7 @@
     </div>
 
     <div id="btn-htp">
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htp")} id="">Come si gioca</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htp")} id="btn-htp-1">Come si gioca</button>
         <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("about")} id="">Crediti</button>
     </div>
 </main>
@@ -43,4 +43,8 @@
         margin-top: 70px;
     }
   
+    #btn-htp-1{
+        margin-right: 50px;
+    }
+
 </style>
