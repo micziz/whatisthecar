@@ -32,7 +32,7 @@
 
     let fineshed = false;
 
-    async function checkCar(carNum?){
+    async function checkCar(carNum?: number){
         if ( carNum == chosenCar && timesDone < 20){
         carChosen = true;
         result.length = 0

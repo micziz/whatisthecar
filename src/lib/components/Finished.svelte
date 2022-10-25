@@ -1,7 +1,7 @@
 <script lang="ts">
   import GoHome from "./GoHome.svelte";
 
-    export let pointCount;
+    export let pointCount: number;
 </script>
 
 <main>

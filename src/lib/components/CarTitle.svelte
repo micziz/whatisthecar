@@ -1,7 +1,7 @@
 <script lang="ts">
     import capitalize from "just-capitalize";
 
-    export let car;
+    export let car: string;
 </script>
 
 <main>

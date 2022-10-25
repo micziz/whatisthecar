@@ -24,7 +24,7 @@
 
   let result = []
 
-  async function checkCar(carNum?){
+  async function checkCar(carNum?: number){
     if ( carNum == chosenCar){
       carChosen = true;
       result.length = 0
