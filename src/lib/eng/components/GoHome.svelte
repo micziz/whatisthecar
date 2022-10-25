@@ -6,7 +6,7 @@
 
 <main>
     <div id="get-back-btn">
-        <button class="button is-link is-rounded is-outlined" style="margin-top: 70px;" on:click={goToHome}>Torna indietro.</button>
+        <button class="button is-link is-rounded is-outlined" style="margin-top: 70px;" on:click={goToHome}>Go back</button>
     </div>
 </main>
 

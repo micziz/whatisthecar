@@ -6,8 +6,8 @@
 </script>
 
 <main>
-    <h1 class="title is-3" id="finito">Finitio</h1>
-    <h1 class="title is-5">Hai ottenuto {pointCount+1}/{maxNum+1} punti</h1>
+    <h1 class="title is-3" id="finito">You finished</h1>
+    <h1 class="title is-5">You obtained {pointCount+1} out of {maxNum+1} points</h1>
 
     <GoHome/>
 </main>

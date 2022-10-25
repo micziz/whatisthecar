@@ -2,7 +2,7 @@
   import GoHome from "./GoHome.svelte";
 </script>
 <main>
-    <h1 id="win-lose-title" class="title is-1">Corretto</h1>
+    <h1 id="win-lose-title" class="title is-1">Correct!</h1>
 
     <GoHome/>
 </main>
