@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Title from "../lib/components/Title.svelte";
+
     let tutNum = 1;
 
     const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -15,56 +17,53 @@
 </script>
   
 <main> 
-    <h1 id="title" class="title is-1">What is the car - Come Si Gioca?</h1>
-    
-        {#if tutNum == 1}
-            <h1>Ciao! Sono micziz, e oggi ti insegnero come giocare a What is the Car!</h1>
-            <div id="tut1">
-                <button on:click={() => {tutNum++}} class="button is-link is-rounded is-outlined">Continua</button>
-            </div>
-        {:else if tutNum == 2}
-            <h1>Iniziamo! Davanti a te apparira un nome di una compagnia di macchine</h1>
-            <div id="tut2">
-                <button on:click={() => {tutNum++}} class="button is-link is-rounded is-outlined">Continua</button>
-            </div>
+    <Title/>    
+    {#if tutNum == 1}
+        <h1>Ciao! Sono micziz, e oggi ti insegnero come giocare a What is the Car!</h1>
+        <div id="tut1">
+            <button on:click={() => {tutNum++}} class="button is-link is-rounded is-outlined">Continua</button>
+        </div>
+    {:else if tutNum == 2}
+        <h1>Iniziamo! Davanti a te apparira un nome di una compagnia di macchine</h1>
+        <div id="tut2">
+            <button on:click={() => {tutNum++}} class="button is-link is-rounded is-outlined">Continua</button>
+        </div>
 
-            <h1 id="car" class="title is-3" style="margin-top: 50px;">Honda</h1>
-            
-        {:else if tutNum == 3}
-            <h1>E anche due foto di loghi. Sotto queste due foto apparianno due bottoni!</h1>
-            <div id="tut3">
-                <button on:click={() => {tutNum++}} class="button is-link is-rounded is-outlined">Continua</button>
-            </div>
-            <h1 id="car" class="title is-3" style="margin-top: 50px;">Honda</h1>
+        <h1 id="car" class="title is-3" style="margin-top: 50px;">Honda</h1>        
+    {:else if tutNum == 3}
+        <h1>E anche due foto di loghi. Sotto queste due foto apparianno due bottoni!</h1>
+        <div id="tut3">
+            <button on:click={() => {tutNum++}} class="button is-link is-rounded is-outlined">Continua</button>
+        </div>
+        <h1 id="car" class="title is-3" style="margin-top: 50px;">Honda</h1>
 
-            <div id="images">
-                <img src={`/images/honda.jpg`} alt="car-1" width="300" height="300" id="img1">
-                <img src={`/images/audi.jpg`} alt="car-2" width="300" height="300" id="img2">
-            </div>    
+        <div id="images">
+            <img src={`/images/honda.jpg`} alt="car-1" width="300" height="300" id="img1">
+            <img src={`/images/audi.jpg`} alt="car-2" width="300" height="300" id="img2">
+        </div>    
 
-            <div id="buttons">
-                <button class="button is-link is-rounded is-outlined" id="btn1">Questa</button>
-                
-                <button class="button is-link is-rounded is-outlined" id="btn2">Questa</button>
-              </div>
-        {:else if tutNum == 4}
-            <h1>Il tuo obbiettivo e di indovinare quella giusta.</h1>
-            <div id="tut4">
-                <button on:click={() => {tutNum++}} class="button is-link is-rounded is-outlined">Continua</button>
-            </div>
-        {:else if tutNum == 5}
-            <h1>Vuoi provare?</h1>
+        <div id="buttons">
+            <button class="button is-link is-rounded is-outlined" id="btn1">Questa</button>    
+            <button class="button is-link is-rounded is-outlined" id="btn2">Questa</button>
+        </div>
+    {:else if tutNum == 4}
+        <h1>Il tuo obbiettivo è  di indovinare quella giusta.</h1>
+        <div id="tut4">
+            <button on:click={() => {tutNum++}} class="button is-link is-rounded is-outlined">Continua</button>
+        </div>
+    {:else if tutNum == 5}
+        <h1>Vuoi provare?</h1>
 
-            <div id="tut5">
-                <button on:click={goToNormal} id="btnGO" class="button is-link is-rounded is-outlined">Si</button>
-                <button on:click={goToHome} id="btnHome" class="button is-link is-rounded is-outlined">No</button>
-            </div>
+        <div id="tut5">
+            <button on:click={goToNormal} id="btnGO" class="button is-link is-rounded is-outlined">Si</button>
+            <button on:click={goToHome} id="btnHome" class="button is-link is-rounded is-outlined">No</button>
+        </div>
 
-        {:else if tutNum == 6}
-            <h1>Ok! Inizia in 3 secondi</h1>
-        {:else}
-            <h1>C'e stato un errore. Prova a ricaricare la pagina</h1>
-        {/if}
+    {:else if tutNum == 6}
+        <h1>Ok! La tua partita iniziera tra 3 secondi</h1>
+    {:else}
+        <h1>C'e stato un errore. Prova a ricaricare la pagina</h1>
+    {/if}
 </main>
   
 <style>
@@ -72,12 +71,6 @@
   
     main{
       font-family: 'Raleway', sans-serif;
-    }
-  
-    #title {
-      text-align: center;
-      margin-top: 50px;
-      font-weight: bold;
     }
 
     h1{

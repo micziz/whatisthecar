@@ -3,6 +3,8 @@
   import Home from "./pages/Home.svelte";
   import Normal from "./pages/Normal.svelte";
   import Htp from "./pages/HTP.svelte";
+  import About from './pages/About.svelte';
+  
   import Router from 'svelte-spa-router'
 
 
@@ -11,7 +13,8 @@
     '/': Home,
     '/normal': Normal,
     '/htp': Htp,
-    '/pointsmode': PointsMode
+    '/pointsmode': PointsMode,
+    '/about': About
   }
 </script>
 

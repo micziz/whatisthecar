@@ -1,4 +1,5 @@
 <script lang="ts"> 
+	import Title from './../lib/components/Title.svelte';
 
     function GOTO(location: string){
         window.location.href = `/#/${location}`
@@ -6,7 +7,7 @@
 </script>
   
 <main> 
-    <h1 id="title" class="title is-1">What is the car</h1>
+    <Title/>
 
     <h1 style="text-align: center;">Creato da Micziz</h1>
 
@@ -27,12 +28,6 @@
       font-family: 'Raleway', sans-serif;
     }
   
-    #title {
-      text-align: center;
-      margin-top: 50px;
-      font-weight: bold;
-    }
-
     #btn{
         display: flex;
         justify-content: center;
