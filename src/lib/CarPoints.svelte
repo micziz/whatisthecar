@@ -6,7 +6,7 @@
 
     import { cars } from './utils/cars.js';
 
-  
+
     function generateCar(){
         let car1 = cars[Math.floor(Math.random()*cars.length)];
         let car2 = cars[Math.floor(Math.random()*cars.length)];  

@@ -3,7 +3,6 @@
 
     export let pointCount: number;
     export let maxNum: number;
-
 </script>
 
 <main>

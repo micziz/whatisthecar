@@ -5,6 +5,7 @@ specifiers:
   '@tsconfig/svelte': ^3.0.0
   bulma: ^0.9.4
   just-capitalize: ^3.1.1
+  party-js: ^2.2.0
   sass: ^1.53.0
   svelte: ^3.49.0
   svelte-check: ^2.8.1
@@ -16,6 +17,7 @@ specifiers:
 
 dependencies:
   just-capitalize: 3.1.1
+  party-js: 2.2.0
   svelte-spa-router: 3.3.0
 
 devDependencies:
@@ -650,6 +652,10 @@ packages:
     dependencies:
       callsites: 3.1.0
     dev: true
+
+  /party-js/2.2.0:
+    resolution: {integrity: sha512-50hGuALCpvDTrQLPQ1fgUgxKIWAH28ShVkmeK/3zhO0YJyCqkhrZhQEkWPxDYLvbFJ7YAXyROmFEu35gKpZLtQ==}
+    dev: false
 
   /path-is-absolute/1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
