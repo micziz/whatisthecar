@@ -2,11 +2,13 @@
   import GoHome from "./GoHome.svelte";
 
     export let pointCount: number;
+    export let maxNum: number;
+
 </script>
 
 <main>
     <h1 class="title is-3" id="finito">Finitio</h1>
-    <h1 class="title is-5">Hai ottenuto {pointCount}/20 punti</h1>
+    <h1 class="title is-5">Hai ottenuto {pointCount+1}/{maxNum+1} punti</h1>
 
     <GoHome/>
 </main>

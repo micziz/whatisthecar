@@ -29,33 +29,34 @@
     let pointCount = 0;
 
     let timesDone = 0;
+    export let maxTimes = 10;
 
     let fineshed = false;
 
     async function checkCar(carNum?: number){
-        if ( carNum == chosenCar && timesDone < 20){
-        carChosen = true;
-        result.length = 0
-        result.push('win')
-        pointCount++;
-        timesDone++;
-        await sleep(1500);
-        carss = generateCar()
-        car1 = carss[0] 
-        car2 = carss[1]
-        chosenCar = Math.floor(Math.random() * 2) + 1
-        carChosen = false;
-        } else if ( carNum != chosenCar && timesDone !< 20 ){
-        carChosen = true;
-        result.length = 0
-        result.push('lost')
-        timesDone++;
-        await sleep(1500);
-        carss = generateCar()
-        car1 = carss[0] 
-        car2 = carss[1]
-        chosenCar = Math.floor(Math.random() * 2) + 1
-        carChosen = false;
+        if ( carNum == chosenCar && timesDone < maxTimes){
+            carChosen = true;
+            result.length = 0
+            result.push('win')
+            pointCount++;
+            timesDone++;
+            await sleep(1500);
+            carss = generateCar()
+            car1 = carss[0] 
+            car2 = carss[1]
+            chosenCar = Math.floor(Math.random() * 2) + 1
+            carChosen = false;
+        } else if ( carNum != chosenCar && timesDone !< maxTimes ){
+            carChosen = true;
+            result.length = 0
+            result.push('lost')
+            timesDone++;
+            await sleep(1500);
+            carss = generateCar()
+            car1 = carss[0] 
+            car2 = carss[1]
+            chosenCar = Math.floor(Math.random() * 2) + 1
+            carChosen = false;
         } else {
             fineshed = true;
         }
@@ -71,7 +72,7 @@
             <Lose/>
         {/if}
     {:else if fineshed == true}
-        <Finished pointCount={pointCount}/>
+        <Finished pointCount={pointCount}  maxNum={maxTimes}/>
     {:else}
         {#if chosenCar == 1}
             <CarTitle car={car1}/> 
