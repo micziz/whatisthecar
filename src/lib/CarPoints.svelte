@@ -3,9 +3,11 @@
     import Finished from './components/Finished.svelte';
     import Lose from './components/Lose.svelte';
     import Win from './components/Win.svelte';
+
+    import { cars } from './utils/cars.js';
+
   
     function generateCar(){
-        let cars = ["audi", "chevrolet", "citroen", "honda", "hyundai", "pegout", "renault", "suzuki", "volkswagen", "toyota", "mercedes"] 
         let car1 = cars[Math.floor(Math.random()*cars.length)];
         let car2 = cars[Math.floor(Math.random()*cars.length)];  
         if ( car1 == car2){
