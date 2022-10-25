@@ -18,6 +18,7 @@
 
     <div id="btn-htp">
         <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htp")} id="">Come si gioca</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("about")} id="">Crediti</button>
     </div>
 </main>
   
