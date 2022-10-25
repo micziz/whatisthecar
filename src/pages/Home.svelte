@@ -1,10 +1,7 @@
 <script lang="ts"> 
-    function goToNormal(){
-        window.location.href = '/#/normal'
-    }
 
-    function goToHTP(){
-        window.location.href = '/#/htp'
+    function GOTO(location: string){
+        window.location.href = `/#/${location}`
     }
 </script>
   
@@ -14,11 +11,12 @@
     <h1 style="text-align: center;">Creato da Micziz</h1>
 
     <div id="btn">
-        <button class="button is-link is-rounded is-outlined" on:click={goToNormal} id="btn1">Modalita Normale</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("normal")} id="btn1">Modalita Normale</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("pointsmode")} id="btn1" style="margin-left: 50px;">Modalita A Punti</button>
     </div>
 
     <div id="btn-htp">
-        <button class="button is-link is-rounded is-outlined" on:click={goToHTP} id="">Come si gioca</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htp")} id="">Come si gioca</button>
     </div>
 </main>
   
