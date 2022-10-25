@@ -1,9 +1,11 @@
 <script lang="ts">
-  import GoHome from "./GoHome.svelte";  
+	import capitalize from 'just-capitalize';
+    import GoHome from "./GoHome.svelte";  
+    export let car;
 </script>
 
 <main>
-    <h1 id="win-lose-title" class="title is-1">Sbagliato</h1>
+    <h1 id="win-lose-title" class="title is-1">Sbagliato, era la {capitalize(car)}</h1>
   
     <GoHome />    
 </main>

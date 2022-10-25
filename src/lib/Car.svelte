@@ -55,7 +55,17 @@
     {#if result[0] == 'win'}
       <Win/>
     {:else}
-      <Lose/>
+      {#if chosenCar == 1}
+        <Lose car={car1}/>
+        <div id="images">
+          <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300"> 
+        </div>
+      {:else}
+        <Lose car={car2}/>
+        <div id="images">
+          <img src={`/images/${car2}.jpg`} alt="car-1" width="300" height="300"> 
+        </div>
+      {/if}
     {/if}
   {:else}
     {#if chosenCar == 1}
