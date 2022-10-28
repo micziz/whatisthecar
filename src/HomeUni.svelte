@@ -1,3 +1,4 @@
 <script>
-    window.location.href = '/#/ita'
+    const location = localStorage.getItem('lang');
+    window.location.href = `/#/${location}`
 </script>

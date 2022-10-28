@@ -6,10 +6,14 @@
     }
     
     function goToEng(){
+        localStorage.clear();
+        localStorage.setItem('lang', 'eng');
         window.location.href = `/#/eng/`
     }
     
     function goToEsp(){
+        localStorage.clear();
+        localStorage.setItem('lang', 'esp');
         window.location.href = `/#/esp/`
     }
 </script>
