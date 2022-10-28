@@ -2,7 +2,11 @@
 	import Title from '../../lib/ita/components/Title.svelte';
 
     function GOTO(location: string){
-        window.location.href = `/#/${location}`
+        window.location.href = `/#/ita/${location}`
+    }
+    
+    function goToEng(){
+        window.location.href = `/#/eng/`
     }
 </script>
   
@@ -21,7 +25,7 @@
 
     <h1 class="title is-3" style="text-align: center; margin-top: 70px; margin-right: 40px;">Altre lingue</h1>
     <div id="btn-lang">
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("eng")} id="btn-htp-1">English</button>
+        <button class="button is-link is-rounded is-outlined" on:click={goToEng} id="btn-htp-1">English</button>
     </div>
 </main>
   

@@ -11,20 +11,22 @@
   import HomeEng from './pages/english/HomeEng.svelte';
   
   import Router from 'svelte-spa-router'
+  import HomeUni from './HomeUni.svelte';
 
 
   const routes = {
     // Exact path
-    '/': Home,
-    '/normal': Normal,
-    '/htp': Htp,
-    '/pointsmode': PointsMode,
-    '/about': About,
-    '/eng': HomeEng,
-    '/normalENG': NormalEng,
-    '/htpENG': HtpEng,
-    '/pointsmodeENG': PointsModeEng,
-    '/aboutENG': AboutEng,
+    '/': HomeUni,
+    '/ita/': Home,
+    '/ita/normal': Normal,
+    '/ita/htp': Htp,
+    '/ita/pointsmode': PointsMode,
+    '/ita/about': About,
+    '/eng/': HomeEng,
+    '/eng/normal': NormalEng,
+    '/eng/htp': HtpEng,
+    '/eng/pointsmode': PointsModeEng,
+    '/eng/about': AboutEng,
   }
 </script>
 

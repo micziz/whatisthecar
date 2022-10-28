@@ -2,7 +2,11 @@
 	import Title from '../../lib/eng/components/Title.svelte';
 
     function GOTO(location: string){
-        window.location.href = `/#/${location}`
+        window.location.href = `/#/eng/${location}`
+    }
+
+    function goToIta(){
+        window.location.href = `/#/`
     }
 </script>
   
@@ -10,18 +14,18 @@
     <Title/>
 
     <div id="btn">
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("normalENG")} id="btn1">Normal Mode</button>
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("pointsmodeENG")} id="btn1" style="margin-left: 50px;">Points mode</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("normal")} id="btn1">Normal Mode</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("pointsmode")} id="btn1" style="margin-left: 50px;">Points mode</button>
     </div>
 
     <div id="btn-htp">
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htpENG")} id="btn-htp-1">Tutorial</button>
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("aboutENG")} id="">Credits</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htp")} id="btn-htp-1">Tutorial</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("about")} id="">Credits</button>
     </div>
 
     <h1 class="title is-3" style="text-align: center; margin-top: 70px; margin-right: 40px;">Other languages</h1>
     <div id="btn-lang">
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("")} id="btn-htp-1">Italian</button>
+        <button class="button is-link is-rounded is-outlined" on:click={goToIta} id="btn-htp-1">Italian</button>
     </div>
 </main>
   
