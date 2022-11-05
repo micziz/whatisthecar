@@ -1,4 +1,9 @@
-<script>
+<script lang="ts">
     const location = localStorage.getItem('lang');
-    window.location.href = `/#/${location}`
+    if (location == null){
+        window.location.href = `/#/ita`
+
+    } else {
+        window.location.href = `/#/${location}`
+    }
 </script>
