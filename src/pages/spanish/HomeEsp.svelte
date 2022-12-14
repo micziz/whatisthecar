@@ -1,5 +1,5 @@
 <script lang="ts"> 
-	import Title from '../../lib/ita/components/Title.svelte';
+	import Title from '../../lib/esp/components/Title.svelte';
 
     function GOTO(location: string){
         window.location.href = `/#/ita/${location}`
@@ -11,10 +11,10 @@
         window.location.href = `/#/eng/`
     }
     
-    function goToEsp(){
+    function goToIta(){
         localStorage.clear();
-        localStorage.setItem('lang', 'esp');
-        window.location.href = `/#/esp/`
+        localStorage.setItem('lang', 'ita');
+        window.location.href = `/#/ita/`
     }
 </script>
   
@@ -22,19 +22,19 @@
     <Title/>
 
     <div id="btn">
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("normal")} id="btn1">Modalita Normale</button>
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("pointsmode")} id="btn1" style="margin-left: 50px;">Modalita A Punti</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("normal")} id="btn1">Modaidad Normal</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("pointsmode")} id="btn1" style="margin-left: 50px;">Modalidad A Puntos</button>
     </div>
 
     <div id="btn-htp">
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htp")} id="btn-htp-1">Come si gioca</button>
-        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("about")} id="">Crediti</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("htp")} id="btn-htp-1">Come se juega</button>
+        <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("about")} id="">Creditos</button>
     </div>
 
-    <h1 class="title is-3" style="text-align: center; margin-top: 70px; margin-right: 40px;">Altre lingue</h1>
+    <h1 class="title is-3" style="text-align: center; margin-top: 70px; margin-right: 40px;">Otras Lenguas</h1>
     <div id="btn-lang">
         <button class="button is-link is-rounded is-outlined" on:click={goToEng} id="btn-htp-1">English</button>
-        <button class="button is-link is-rounded is-outlined" on:click={goToEsp} id="btn-htp-1">Español</button>
+        <button class="button is-link is-rounded is-outlined" on:click={goToIta} id="btn-htp-1">Italiano</button>
     </div>
 </main>
   

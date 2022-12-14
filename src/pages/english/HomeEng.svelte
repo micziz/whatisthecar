@@ -6,7 +6,15 @@
     }
 
     function goToIta(){
-        window.location.href = `/#/`
+        localStorage.clear();
+        localStorage.setItem('lang', 'ita');
+        window.location.href = `/#/ita`
+    }
+    
+    function goToEsp(){
+        localStorage.clear();
+        localStorage.setItem('lang', 'esp');
+        window.location.href = `/#/esp`
     }
 </script>
   
@@ -26,6 +34,7 @@
     <h1 class="title is-3" style="text-align: center; margin-top: 70px; margin-right: 40px;">Other languages</h1>
     <div id="btn-lang">
         <button class="button is-link is-rounded is-outlined" on:click={goToIta} id="btn-htp-1">Italian</button>
+        <button class="button is-link is-rounded is-outlined" on:click={goToEsp} id="btn-htp-1">Español</button>
     </div>
 </main>
   
