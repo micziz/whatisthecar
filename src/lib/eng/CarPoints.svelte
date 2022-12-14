@@ -3,6 +3,7 @@
     import Finished from './components/Finished.svelte';
     import Lose from './components/Lose.svelte';
     import Win from './components/Win.svelte';
+    import CarComponent from './components/CarComponent.svelte';
 
     import { cars } from '../utils/cars.js';
 
@@ -72,12 +73,12 @@
             {#if chosenCar == 1}
                 <Lose car={car1}/>
                 <div id="images">
-                    <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300"> 
+                    <CarComponent src="/images/${car1}.jpg"/>
                 </div>
             {:else}
                 <Lose car={car2}/>
                 <div id="images">
-                    <img src={`/images/${car2}.jpg`} alt="car-1" width="300" height="300"> 
+                    <CarComponent src="/images/${car2}.jpg"/>
                 </div>
             {/if}
         {/if}
@@ -90,8 +91,8 @@
             <CarTitle car={car2}/> 
         {/if}
         <div id="images">
-            <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300" id="img1">
-            <img src={`/images/${car2}.jpg`} alt="car-2" width="300" height="300" id="img2">
+            <CarComponent src="/images/${car1}.jpg"/>
+            <CarComponent src="/images/${car2}.jpg"/>
         </div>
 
         <div id="buttons">
@@ -114,25 +115,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
-  }
-
-  #img1{
-    margin-right: 500px;
+    margin-top: 18.75rem;
   }
 
   #buttons{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 
   #btn1{
-    margin-right: 700px;
+    margin-right: 43.75rem;
   }
 
   #btn2{
-    margin-left: 15px;
+    margin-left: 0.938rem;
   }
 </style>
