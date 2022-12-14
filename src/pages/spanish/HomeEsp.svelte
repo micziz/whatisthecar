@@ -2,7 +2,7 @@
 	import Title from '../../lib/esp/components/Title.svelte';
 
     function GOTO(location: string){
-        window.location.href = `/#/ita/${location}`
+        window.location.href = `/#/esp/${location}`
     }
     
     function goToEng(){

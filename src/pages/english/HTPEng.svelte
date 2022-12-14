@@ -8,7 +8,7 @@
     async function goToNormal(){
         tutNum = 6;
         await sleep(3000);
-        window.location.href = '/#/normal'
+        window.location.href = '/#/eng/normal'
     }
     
     function goToHome() {        
@@ -55,7 +55,7 @@
         <h1>Want to try</h1>
 
         <div id="tut5">
-            <button on:click={goToNormal} id="btnGO" class="button is-link is-rounded is-outlined">Si</button>
+            <button on:click={goToNormal} id="btnGO" class="button is-link is-rounded is-outlined">Yes</button>
             <button on:click={goToHome} id="btnHome" class="button is-link is-rounded is-outlined">No</button>
         </div>
 
