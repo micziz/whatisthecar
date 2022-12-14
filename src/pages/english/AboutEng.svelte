@@ -26,12 +26,12 @@
 
     #h1{
         text-align: center;
-        margin-top: 65px;
+        margin-top: 4.063rem;
     }
 
     #p{
         text-align: center;
-        margin-top: 40px;
+        margin-top: 2.5rem;
         font-weight: bold;
         font-size: large;
     }

@@ -31,10 +31,12 @@
         <button class="button is-link is-rounded is-outlined" on:click={() => GOTO("about")} id="">Credits</button>
     </div>
 
-    <h1 class="title is-3" style="text-align: center; margin-top: 70px; margin-right: 40px;">Other languages</h1>
+    <div id="title-div">
+        <h1 class="title is-3" id="title-lang" style="text-align: center; margin-top: 70px; margin-right: 40px;">Other languages</h1>
+    </div>
     <div id="btn-lang">
-        <button class="button is-link is-rounded is-outlined" on:click={goToIta} id="btn-htp-1">Italian</button>
-        <button class="button is-link is-rounded is-outlined" on:click={goToEsp} id="btn-htp-1">Español</button>
+        <button class="button is-link is-rounded is-outlined" on:click={goToIta} id="btn-lang-1">Italian</button>
+        <button class="button is-link is-rounded is-outlined" on:click={goToEsp} id="btn-lang-1">Español</button>
     </div>
 </main>
   
@@ -49,23 +51,40 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 400px;
+        margin-top: 12rem;
     }
     
     #btn-htp{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 70px;
+        margin-top: 4.375rem;
     }
-  
+    
     #btn-htp-1{
-        margin-right: 50px;
+        display: inline-block;
+        margin-right: 3.125rem;
+    }
+    
+    #btn-lang-1{
+        margin-right: 3.125rem;
+        margin-bottom: 3.125rem;
     }
 
     #btn-lang{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 2rem;
+    }
+
+    #title-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+
+    #title-lang{
+        text-align: center; 
     }
 </style>

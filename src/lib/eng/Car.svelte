@@ -79,9 +79,9 @@
     </div>
 
     <div id="buttons">
-      <button class="button is-link is-rounded is-outlined" id="btn1" on:click={() => checkCar(1)}>Questa</button>
+      <button class="button is-link is-rounded is-outlined" id="btn1" on:click={() => checkCar(1)}>This one</button>
       
-      <button class="button is-link is-rounded is-outlined" id="btn2" on:click={() => checkCar(2)}>Questa</button>
+      <button class="button is-link is-rounded is-outlined" id="btn2" on:click={() => checkCar(2)}>This one</button>
     </div>
   {/if}
 </main>
@@ -99,25 +99,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 6rem;
   }
 
   #img1{
-    margin-right: 500px;
+    margin-right: 31.25rem;
   }
 
   #buttons{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 1.875rem;
+    margin-bottom: 6rem;
   }
 
   #btn1{
-    margin-right: 700px;
+    margin-right: 43.75rem;
   }
 
   #btn2{
-    margin-left: 15px;
+    margin-left: 0.938rem;
   }
 </style>

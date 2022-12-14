@@ -81,65 +81,66 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
             
     #tut2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
             
     #tut3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
             
     #tut4 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
             
     #tut5 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
     
 
     #btnGO{
-        margin-right: 40px;
+        margin-right: 2.5rem;
     }
 
     #images{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 300px;
-  }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+    }
+    
+    #img1{
+        margin-right: 31.25rem;
+    }
 
-  #img1{
-    margin-right: 500px;
-  }
+    #buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.875rem;
+        margin-bottom: 6rem;
+    }
 
-  #buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
+    #btn1{
+        margin-right: 43.75rem;
+    }
 
-  #btn1{
-    margin-right: 700px;
-  }
-
-  #btn2{
-    margin-left: 15px;
-  }
+    #btn2{
+        margin-left: 0.938rem;
+    }
 </style>

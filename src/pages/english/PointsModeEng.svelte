@@ -41,21 +41,21 @@
 
     #title-1{
         text-align: center;
-        margin-top: 400px;
+        margin-top: 2rem;
     }
 
     #points-choice-btns{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
 
     #five-pt{
-        margin-right: 50px;
+        margin-right: 3.125rem;
     }
     
     #ten-pt{        
-        margin-right: 50px;
+        margin-right: 3.125rem;
     }
 </style>
