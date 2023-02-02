@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CarTitle from './components/CarTitle.svelte';
+  import Title from './components/Title.svelte'
   import Lose from './components/Lose.svelte';
   import Win from './components/Win.svelte';
   import Car from './components/Car.svelte';
@@ -42,6 +42,7 @@
 </script>
 
 <main>
+  <Title/>
   {#if carChosen}
     {#if result == 'win'}
       <Win/>

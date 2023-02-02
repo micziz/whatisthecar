@@ -1,11 +1,11 @@
 <script lang="ts">
-	import CarTitle from './components/CarTitle.svelte';
     import Finished from './components/Finished.svelte';
     import Lose from './components/Lose.svelte';
     import Win from './components/Win.svelte';
     import Car from './components/Car.svelte';
     import Btn from './components/Btn.svelte'
     import { generateCar } from './utils/generateCars.js'
+  import Title from './components/Title.svelte';
     let chosenCar = Math.floor(Math.random() * 2) + 1
     let carChosen = false; 
 
@@ -54,6 +54,7 @@
 </script>
 
 <main>
+  <Title/>
     {#if carChosen}
         {#if result === "win"}
             <Win/>
