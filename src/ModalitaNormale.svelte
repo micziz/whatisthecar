@@ -1,12 +1,12 @@
 <script lang="ts">
     import Title from './components/Title.svelte';
-    import Car from "./Car.svelte";
+    import Game from "./GiocoNormale.svelte";
 </script>
   
 <main> 
     <Title/>
 
-    <Car/>
+    <Game/>
 </main>
   
 <style>

@@ -11,7 +11,9 @@
     main{
         font-family: 'Raleway', sans-serif;
     }
+    
     #win-lose-title {
+        margin-top: 4rem;
         text-align: center;
         font-weight: bold;
     }

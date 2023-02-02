@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Btn from './Btn.svelte'
     function goToHome() {        
         window.location.href = '/#/'
     }
@@ -6,7 +7,7 @@
 
 <main>
     <div id="get-back-btn">
-        <button class="button is-link is-rounded is-outlined" style="margin-top: 70px;" on:click={goToHome}>Torna indietro.</button>
+        <Btn content={"Torna indietro"}  clickFunc={goToHome}/>
     </div>
 </main>
 

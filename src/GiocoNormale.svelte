@@ -2,17 +2,10 @@
   import CarTitle from './components/CarTitle.svelte';
   import Lose from './components/Lose.svelte';
   import Win from './components/Win.svelte';
-	
+  import Car from './components/Car.svelte';
+  import Btn from './components/Btn.svelte'
+  import { generateCar } from './utils/generateCars.js'
   import { cars } from './cars.js';
-  
-  function generateCar(){
-    let car1 = cars[Math.floor(Math.random()*cars.length)];
-    let car2 = cars[Math.floor(Math.random()*cars.length)];  
-    if ( car1 == car2){
-      car2 = cars[Math.floor(Math.random()*cars.length)];  
-    }
-    return [car1, car2]
-  }
   let chosenCar = Math.floor(Math.random() * 2) + 1
   let carChosen = false; 
 
@@ -22,14 +15,13 @@
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-  let result = []
+  let result;
 
   async function checkCar(carNum?: number){
     if ( carNum == chosenCar){
       carChosen = true;
-      result.length = 0
-      result.push('win')
-      await sleep(3000);
+      result = "win";
+      await sleep(1000);
       carss = generateCar()
       car1 = carss[0] 
       car2 = carss[1]
@@ -37,9 +29,8 @@
       carChosen = false;
     } else{
       carChosen = true;
-      result.length = 0
-      result.push('lost')
-      await sleep(3000);
+      result = "lose";
+      await sleep(1000);
       carss = generateCar()
       car1 = carss[0] 
       car2 = carss[1]
@@ -52,36 +43,36 @@
 
 <main>
   {#if carChosen}
-    {#if result[0] == 'win'}
+    {#if result == 'win'}
       <Win/>
     {:else}
       {#if chosenCar == 1}
         <Lose car={car1}/>
         <div id="images">
-          <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300"> 
+          <Car src={`/images/${car1}.jpg`}/>
         </div>
       {:else}
         <Lose car={car2}/>
         <div id="images">
-          <img src={`/images/${car2}.jpg`} alt="car-1" width="300" height="300"> 
+          <Car src={`/images/${car2}.jpg`}/>
         </div>
       {/if}
     {/if}
   {:else}
     {#if chosenCar == 1}
-      <CarTitle car={car1}/> 
-      {:else}
-      <CarTitle car={car2}/> 
+       <div id="images">
+        <Car src={`/images/${car1}.jpg`}/>
+      </div>
+    {:else}
+      <div id="images">
+        <Car src={`/images/${car2}.jpg`}/>
+      </div>
     {/if}
-    <div id="images">
-      <img src={`/images/${car1}.jpg`} alt="car-1" width="300" height="300" id="img1">
-      <img src={`/images/${car2}.jpg`} alt="car-2" width="300" height="300" id="img2">
-    </div>
-
     <div id="buttons">
-      <button class="button is-link is-rounded is-outlined" id="btn1" on:click={() => checkCar(1)}>Questa</button>
-      
-      <button class="button is-link is-rounded is-outlined" id="btn2" on:click={() => checkCar(2)}>Questa</button>
+      <div id="btns">
+        <Btn content={car1}  clickFunc={() => checkCar(1)}/>
+      </div>
+      <Btn content={car2}  clickFunc={() => checkCar(2)}/>
     </div>
   {/if}
 </main>
@@ -99,25 +90,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 3rem;
   }
-
-  #img1{
-    margin-right: 500px;
-  }
-
   #buttons{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
   }
-
-  #btn1{
-    margin-right: 700px;
-  }
-
-  #btn2{
-    margin-left: 15px;
+  #btns{
+    margin-right: 2rem;
   }
 </style>

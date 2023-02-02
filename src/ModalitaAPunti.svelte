@@ -1,7 +1,8 @@
 <script lang="ts">
 	import GoHome from './components/GoHome.svelte';
-    import CarPoints from "./CarPoints.svelte";
+    import CarPoints from "./GiocoAPunti.svelte";
     import Title from './components/Title.svelte';
+    import Btn from './components/Btn.svelte'
 
     let inGame = false;
     let maxTimes;
@@ -19,9 +20,13 @@
         <h1 class="title is-3" id="title-1">Qunati punti?</h1>
 
         <div id="points-choice-btns">
-            <button on:click={() => startGame(4)} id="five-pt" class="button is-link is-rounded is-outlined">5 punti</button>
-            <button on:click={() => startGame(9)} id="ten-pt" class="button is-link is-rounded is-outlined">10 punti (defualt)</button>
-            <button on:click={() => startGame(19)} id="twenty-pt" class="button is-link is-rounded is-outlined">20 punti</button>
+            <Btn content={"5 Punti"}  clickFunc={() => startGame(4)}/>
+        </div>
+        <div id="points-choice-btns">
+            <Btn content={"10 Punti"}  clickFunc={() => startGame(4)}/>
+        </div>
+        <div id="points-choice-btns">
+            <Btn content={"20 Punti"}  clickFunc={() => startGame(4)}/>
         </div>
 
         <GoHome/>
@@ -41,21 +46,11 @@
 
     #title-1{
         text-align: center;
-        margin-top: 400px;
     }
 
     #points-choice-btns{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
-    }
-
-    #five-pt{
-        margin-right: 50px;
-    }
-    
-    #ten-pt{        
-        margin-right: 50px;
     }
 </style>

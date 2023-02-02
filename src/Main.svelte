@@ -1,17 +1,15 @@
 <script lang="ts">
   import Casa from "./Casa.svelte";
-  import Normal from "./NormalIta.svelte";
-  import Htp from "./HTPIta.svelte";
-  import PointsMode from './PointsModeIta.svelte';
-
-  
+  import Gioco from "./GiocoNormale.svelte";
+  import ComeSiGioca from "./ComeSiGioca.svelte";
+  import ModalitaAPunti from './ModalitaAPunti.svelte';  
   import Router from 'svelte-spa-router'
 
   const routes = {
     '/': Casa,
-    '/normale': Normal,
-    '/comeGiocare': Htp,
-    '/modalitaAPunti': PointsMode,
+    '/normale': Gioco,
+    '/comeGiocare': ComeSiGioca,
+    '/modalitaAPunti': ModalitaAPunti,
   }
 </script>
 
