@@ -3,7 +3,7 @@
   import Lose from './components/Lose.svelte';
   import Win from './components/Win.svelte';
 	
-  import { cars } from '../utils/cars.js';
+  import { cars } from './cars.js';
   
   function generateCar(){
     let car1 = cars[Math.floor(Math.random()*cars.length)];

@@ -22,5 +22,3 @@ export let cars = [
     "jaguar",
     "lexus"
 ] 
-
-console.log(cars.length)

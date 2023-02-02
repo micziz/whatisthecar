@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GoHome from '../../lib/ita/components/GoHome.svelte';
-    import CarPoints from "../../lib/ita/CarPoints.svelte";
-    import Title from '../../lib/ita/components/Title.svelte';
+	import GoHome from './components/GoHome.svelte';
+    import CarPoints from "./CarPoints.svelte";
+    import Title from './components/Title.svelte';
 
     let inGame = false;
     let maxTimes;

@@ -1,7 +1,6 @@
 <script lang="ts">
-	  import Title from './../../lib/ita/components/Title.svelte';
-    import Car from "../../lib/ita/Car.svelte";
- 
+    import Title from './components/Title.svelte';
+    import Car from "./Car.svelte";
 </script>
   
 <main> 
